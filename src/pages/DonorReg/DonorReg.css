@@ -1,0 +1,22 @@
+.donor_reg_main
+{
+     width: 100vw;
+     background-color:  #77A7CA;
+     min-height: 90vh;
+     flex-direction: column ;
+     display: flex;
+     padding: 7rem;
+}
+.donor_reg_button
+{
+    width :4rem;
+    color:  #0062CC;
+    border-style:none;
+    font-size: 1rem;
+}
+.donor_reg_button:hover
+{
+    
+    background-color:#77A7CA ;
+      
+}

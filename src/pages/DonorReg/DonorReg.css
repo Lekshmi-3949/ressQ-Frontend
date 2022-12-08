@@ -1,3 +1,4 @@
+
 .donor_reg_main
 {
      width: 100vw;
@@ -14,9 +15,23 @@
     border-style:none;
     font-size: 1rem;
 }
-.donor_reg_button:hover
+.donor_reg_input.full_name
 {
-    
-    background-color:#77A7CA ;
-      
+    position: absolute;
+width: 296px;
+height: 48px;
+left: 199px;
+top: 381px;
+
+background: #F8F8F8;
+border-radius: 10px;
 }
+  
+/* form {
+    display: inline-block;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 2rem;
+    margin: 2rem 0 1rem 0;
+} */

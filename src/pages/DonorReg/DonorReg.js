@@ -7,11 +7,47 @@ function DonorReg() {
       <div className="donor_reg_main">
         
         <div className="donor_reg_heading">
-           <p>Welcome To Donate!!</p>
+           <h1>Welcome To Donate!!</h1>
        
            <a href="/">sign up and continue</a>
         </div>
         <div classname="donor_reg_inputs">
+         <form action="">
+            <div classname="full_name">
+              <input type="text" name="full-name"  placeholder='Fullname' required=""/>
+             {/* <label>Fullname</label> */}
+          </div>
+          
+        <div classname="email_address">
+              <input type="text" name="emai-address" placeholder='Email address' required=""/>
+             {/* <label>Emailaddress</label> */}
+          </div>
+          
+        <div classname="blood-type">
+              <input type="text" name="blood-type" placeholder='Blood type' required=""/>
+             {/* <label>Bloodtype</label> */}
+          </div>
+          
+        <div classname="gender">
+              <input type="text" name="gender" placeholder='Gender' required=""/>
+             {/* <label>Gender</label> */}
+          </div>
+          
+        <div classname="weight">
+              <input type="text" name="weight" placeholder='Weight' required=""/>
+             {/* <label>Weight</label> */}
+          </div>
+         
+        <div classname="city">
+              <input type="text" name="city" placeholder='City' required=""/>
+             {/* <label>City</label>  */}
+          </div>
+          
+        <div classname="pin-code">
+              <input type="text" name="pin-code" placeholder='Pin code' required=""/>
+             {/* <label>Pincode</label> */}
+          </div>
+          </form>
           </div>
         <button classname='donor_reg_button'> Signup </button>
        

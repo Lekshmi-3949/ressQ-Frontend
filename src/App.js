@@ -1,6 +1,7 @@
 import MainPage from './pages/MainPage/MainPage'
 import './App.css';
-import { DonorReg } from './pages';
+import  DonorReg  from './pages/DonorReg/DonorReg';
+import UserLogin from './pages/UserLogin/UserLogin';
 import { BrowserRouter,Route,Routes} from 'react-router-dom'
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <BrowserRouter>
          <Routes>
             <Route path='/'element={<MainPage/>}/> 
-            <Route path='/donor-reg'element={<DonorReg/>}/>    
+            <Route path='/donor-reg'element={<DonorReg/>}/>
+            <Route path='/user-login'element={<UserLogin/>}/>    
          </Routes>
       </BrowserRouter> 
     </div>

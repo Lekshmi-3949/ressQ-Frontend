@@ -1,0 +1,62 @@
+.Navbar_container{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background:#7bb2d7;
+    height: 4rem;
+    font-size: 0.75rem;
+    color: whitesmoke;
+
+   
+
+}
+
+.Navbar_logo{
+    flex-grow: 8;
+    padding-left: 6rem;
+}
+.R_logo{
+ max-height: 2rem;
+ max-width: 2rem;
+
+}
+.Navbar_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 2;
+}       
+.Navbar_auth{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items: center;
+    flex-grow: 1;
+    padding-right: 6rem;
+    
+    
+}
+.Navbar_auth button{
+    border: none;
+    background: none;
+    color: white;
+    
+
+   
+} 
+.Navbar_auth_signup{
+    background: #427295;
+    border-radius: 71px;
+    color: whitesmoke;
+    height: 1.25;
+    width: 5.5;
+    padding: .25rem;
+
+    
+
+
+
+} 
+    

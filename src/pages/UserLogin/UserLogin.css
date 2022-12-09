@@ -8,18 +8,29 @@
 }
 .login_form__container{
   display: flex;
+  max-width: 560px;
   flex-direction: column;
+  overflow: contain;
   justify-content: center;
   padding:3rem;
 }
 .login__button{
   background-color: #0062CC;
-  height: 2rem;
+  /* position: fixed; */
+  width: 250px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  box-shadow: 4px 4px 12px #05182D, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   color: #ffff;
+  overflow: contain;
 }
 .login__input{
-  height: 48px;
+  height: 30px;
+  padding :8px 8px;
+
+  margin: 8px 0;
   border-radius: 10px;
   border-color: #ffff;
 }
@@ -29,10 +40,12 @@
 }
 .login__form{
   display: flex;
+  max-width: 560px;
   background: hsla(0,0%,100%,.25);
   padding: 3rem;
-  height: 20rem;
+  height: 30rem;
   border-radius: 20px;
   flex-direction: column;
   gap: 2rem;
+  /* position: relative; */
 }

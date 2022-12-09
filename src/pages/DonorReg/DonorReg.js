@@ -9,12 +9,14 @@ function DonorReg() {
         <div className="donor_reg_heading">
            <h1>Welcome To Donate!!</h1>
        
-           <a href="/">sign up and continue</a>
+           <a href="/" className='signup__title'>sign up and continue</a>
         </div>
+        <div className='donate_inputs'>
         <div classname="donor_reg_inputs">
          <form action="">
+          <div className='left_input'>
             <div classname="input">
-              <input type="text" name="full-name"  placeholder='Fullname' required=""/>
+              <input className='su__input' type="text" name="full-name"  placeholder='Fullname' required=""/>
              {/* <label>Fullname</label> */}
           </div>
           
@@ -32,7 +34,8 @@ function DonorReg() {
               <input type="text" name="gender" placeholder='Gender' required=""/>
              {/* <label>Gender</label> */}
           </div>
-          
+          </div>
+          <div className='right_input'>
         <div classname="input">
               <input type="text" name="weight" placeholder='Weight' required=""/>
              {/* <label>Weight</label> */}
@@ -47,7 +50,9 @@ function DonorReg() {
               <input type="text" name="pin-code" placeholder='Pin code' required=""/>
              {/* <label>Pincode</label> */}
           </div>
+          </div>
           </form>
+          </div>
           </div>
         <button classname='donor_reg_button'> Signup </button>
        

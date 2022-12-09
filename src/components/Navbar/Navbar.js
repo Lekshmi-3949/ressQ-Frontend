@@ -7,7 +7,9 @@ import R_logo from '../../assets/r_logo.svg'
 import About from '../About/About'
 import Landing from '../Landing/Landing'
 import Drives from '../Drives/Drives'
+import {useNavigate} from 'react-router-dom'
 const Navbar = () => {
+    const navigate=useNavigate()
   return (
     <div className='Navbar_container'>
 
@@ -40,11 +42,11 @@ const Navbar = () => {
 
         <div className='Navbar_auth'>
             <div className='Navbar_auth_login'>
-                <button>Login</button>
+                <button onClick={()=>{navigate('/user-login')}}>Login</button>
             </div>
 
             <div className='Navbar_auth_signup'>
-                <button>Signup</button>
+                <button onClick={()=>{navigate('/donor-reg')}}>Signup</button>
             </div>
         </div>
 

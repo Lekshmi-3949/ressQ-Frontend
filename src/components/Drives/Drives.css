@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100&display=swap');
+
+.Drives_container{
+    height: 44.5rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+    
+    background:  #77A7CA;    
+    color: #D9D9D9;
+    
+}
+.Drives_title{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3rem;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.Drives_timeline{
+    font-family: 'Raleway';
+    
+    padding-left: 0px;
+    
+}

@@ -27,6 +27,13 @@ background: #F8F8F8;
 border-radius: 10px;
 }
   
+.input{
+
+    height: 48px;
+    border-radius: 10px;
+    border-color: #ffff;
+  
+}
 /* form {
     display: inline-block;
     background: #f3f3f3;

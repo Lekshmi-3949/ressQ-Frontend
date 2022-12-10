@@ -1,5 +1,6 @@
 .Navbar_container{
-    
+    position: fixed;
+    width:100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,7 +28,18 @@
     justify-content: space-around;
     align-items: center;
     flex-grow: 2;
-}       
+}    
+.Navbar_item a{
+    font-size: 0.75rem;
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 19px;
+
+}  
 .Navbar_auth{
     display: flex;
     flex-direction: row;

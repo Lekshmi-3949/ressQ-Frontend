@@ -1,8 +1,15 @@
 import React from 'react'
 import './Navbar.css'
-import R_logo from '../../assets/r_logo.svg'
+import { Link } from "react-scroll";
 
+
+import R_logo from '../../assets/r_logo.svg'
+import About from '../About/About'
+import Landing from '../Landing/Landing'
+import Drives from '../Drives/Drives'
+import {useNavigate} from 'react-router-dom'
 const Navbar = () => {
+    const navigate=useNavigate()
   return (
     <div className='Navbar_container'>
 
@@ -11,19 +18,35 @@ const Navbar = () => {
         </div>
 
         <div className='Navbar_items'>
-            <div>Home</div>
-            <div>Drives</div>
-            <div>About</div>
-            <div>Contact Us</div>
+        <Link to="landing" spy={true} activeClass="active" smooth={true} offset={0} duration={500} className='Navbar_item'>
+          Home
+        </Link>
+
+        <Link to="about" spy={true} activeClass="active" smooth={true} offset={0} duration={500} className='Navbar_item'>
+          About
+        </Link>
+
+        <Link to="drives" spy={true} activeClass="active" smooth={true} offset={0} duration={500} className='Navbar_item'>
+          Drives
+        </Link>
+         
+
+           { /*<div className='Navbar_item'><a href='#landing' spy={true} activeClass="navbar_item_active" smooth={true} offset={0} duration={5000}>Home</a></div>
+            <div className='Navbar_item'><a href='#about' spy={true} activeClass="navbar_item_active" smooth={true} offset={0} duration={5000}>About</a></div>
+            <div className='Navbar_item'><a href='#drives' spy={true} activeClass="navbar_item_active" smooth={true} offset={0} duration={5000}>Drives</a></div>
+        */}
+
+           
+
         </div>
 
         <div className='Navbar_auth'>
             <div className='Navbar_auth_login'>
-                <button>Login</button>
+                <button onClick={()=>{navigate('/user-login')}}>Login</button>
             </div>
 
             <div className='Navbar_auth_signup'>
-                <button>Signup</button>
+                <button onClick={()=>{navigate('/donor-reg')}}>Signup</button>
             </div>
         </div>
 

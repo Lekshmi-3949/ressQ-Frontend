@@ -2,8 +2,9 @@ import React,{useState} from 'react'
 import './UserLogin.css'
 import MainLayout from '../../components/MainLayout/MainLayout'
 import baseUrl from '../../utils/Urls'
-import axiosInstance from '../../utils/axios'
+
 import {useNavigate} from 'react-router-dom'
+import axios from 'axios'
 const UserLogin = () => {
   const[uname,setuname]=useState('')
   const[email,setemail]=useState('')
@@ -11,31 +12,23 @@ const UserLogin = () => {
  const navigate=useNavigate()
 
 
-  const handleLogin= async(e)=>{
-    e.preventDefault()
-    axiosInstance.post(`${baseUrl}/api/token/`,{
-      uname : uname,
-        email: email,
-        password : password
-    }).then((res)=>{
-        console.log(res)
-        localStorage.setItem('access_token',res.data.access);
-        localStorage.setItem('refresh_token',res.data.refresh);
-        axiosInstance.defaults.headers['Authorization']= 'Bearer ' + localStorage.getItem('access_token');
-        if(res.status===200)
-        
-        navigate('/')
-    },(error)=>{
-        console.log(error)
-    })
+  const handleSignup=(e)=>{
+    e.preventDefault();
+    axios.post(`${baseUrl}/register/`,{
+      user_name:uname,
+      email:email,
+      password:password,
 
-}
+      }).then((response)=>{
+      console.log(response)}
+      )
+  }
   return (
     <MainLayout>
     <div className='login__form_main'>
       <div className="login_form__container" >
-      <form onSubmit={handleLogin} className='login__form' >
-        <p className='login__header'>Login</p>
+      <form onSubmit={handleSignup} className='login__form' >
+        <p className='login__header'>SignUp</p>
         <input className='login__input' type="text" value={uname} onChange={(e)=>{setuname(e.target.value)}} placeholder='user name' required/>
         <input className='login__input' type="text" value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder='email id' required/>
         <input className='login__input' type="password"  value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder='password' required/>

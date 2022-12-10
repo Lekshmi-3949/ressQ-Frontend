@@ -10,6 +10,7 @@ const MainPage = () => {
          <Landing/>
          <About/>
          <Drives/>
+         
       </MainLayout>
     </div>
   )

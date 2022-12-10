@@ -12,20 +12,21 @@ const UserLoginR = () => {
 
  const handleLogin= async(e)=>{
   e.preventDefault()
-  axiosInstance.post(`${baseUrl}/api/token/`,{
-      email: email,
-      password : password
-  }).then((res)=>{
-      console.log(res)
-      localStorage.setItem('access_token',res.data.access);
-      localStorage.setItem('refresh_token',res.data.refresh);
-      axiosInstance.defaults.headers['Authorization']= 'Bearer ' + localStorage.getItem('access_token');
-      if(res.status===200)
-      
-      navigate('/')
-  },(error)=>{
-      console.log(error)
-  })
+        axiosInstance.post(`${baseUrl}/api/token/`,{
+            "email": email,
+            "password" : password
+        }).then((res)=>{
+            console.log(res)
+            // localStorage.setItem('access_token',res.data.access);
+            // localStorage.setItem('refresh_token',res.data.refresh);
+            // axiosInstance.defaults.headers['Authorization']= 'Bearer ' + localStorage.getItem('access_token');
+            // axiosInstance.defaults.headers['Content-Type']= 'application/json';
+            if(res.status===200)
+            
+            navigate('/')
+        },(error)=>{
+            console.log(error)
+        })
 }
 
   return (
@@ -37,7 +38,7 @@ const UserLoginR = () => {
         <p className='loginR__header'>Login</p>
         <input className='loginR__input' type="text" value={email} onChange={(e)=>{setemail(e.target.value)}}placeholder='Email Id' required/>
       
-        <input className='loginR__input' type="password" value={password} onChange={(e)=>{setpassword(e.target.value)}} placeholder='password' />
+        <input className='loginR__input' type="password" value={password} onChange={(e)=>{setpassword(e.target.value)}} placeholder='password' required />
         <button className='loginR__button'>Log in</button>
         {/* <p className="forgot-password text-right mt-2"> */}
             {/* Forgot <a href="#">password?</a> */}

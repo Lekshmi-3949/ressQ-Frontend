@@ -26,6 +26,14 @@
   color: #ffff;
   overflow: contain;
 }
+.signin{
+    
+  color: #0062CC;
+  font-size: 1rem;
+  text-decoration: none;
+
+}
+
 .login__input{
   height: 30px;
   padding :8px 8px;

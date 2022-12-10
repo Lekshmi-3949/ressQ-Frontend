@@ -14,23 +14,34 @@
 
 }
 .su__input{
-    height: 2rem;
+   
+    height: 1.5rem; 
+    width : 10rem;
     border-radius: 10px;
     border-color: #ffff;
+    display:flex;
+    flex-direction: column;
 }
 .donor_reg_button
 {
-    width :4rem;
-    color:  #0062CC;
-    border-style:none;
-    font-size: 1rem;
+    background-color: #0062CC;
+    /* position: fixed; */
+    width: 15rem;
+    height: 2.6rem;
+    left: 0px;
+    top: 0px;
+    box-shadow: 4px 4px 12px #05182D, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
+    border-radius: 1.25rem;
+    color: #ffff;
+    overflow: contain;
 }
-.donor_reg_input.full_name
+.donor_reg_inputs
 {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-width: 296px;
-
-left: 199px;
+    width: 296px;
+    left: 199px;
 top: 381px;
 
 background: #F8F8F8;
@@ -41,15 +52,24 @@ height: 30px;
   margin: 8px 0;
 
   border-color: #ffff;
+
+}
+.content_su{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap; 
 }
   
-.input{
-
+/* .input{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
     height: 48px;
     border-radius: 10px;
     border-color: #ffff;
+    flex-wrap:wrap;
   
-}
+} */
 .donor_reg_heading{
     color: #ffff;
     font-size: rem;
@@ -63,22 +83,14 @@ height: 30px;
     margin: 2rem 0 1rem 0;
 } */
 
-.donor_input{
 
-    display: flex;
-    flex-direction: column;
-}
 
-.left_input{
-    display: flex;
-    flex-direction: column;
-}
 
-.right_input{
-    display: flex;
-    flex-direction: column;
-    height: 48px;
-  left: 542px;
-  top: 383px;
 
-}
+
+/* .donor_reg_button{
+    background-color: #0062CC;
+    height: 2rem;
+    border-radius: 20px;
+    color: #ffff;
+} */

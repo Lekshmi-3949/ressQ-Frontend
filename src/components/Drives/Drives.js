@@ -1,5 +1,7 @@
 import React from 'react'
+
 import './Drives.css'
+
 
 const Drives = () => {
   return (
@@ -9,7 +11,7 @@ const Drives = () => {
             Upcoming Drives
           </div>
           <div className='Drives_timeline'>
-                timeline
+
           </div>
 
         

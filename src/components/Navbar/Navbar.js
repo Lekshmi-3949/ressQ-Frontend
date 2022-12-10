@@ -42,11 +42,11 @@ const Navbar = () => {
 
         <div className='Navbar_auth'>
             <div className='Navbar_auth_login'>
-                <button onClick={()=>{navigate('/user-login')}}>Login</button>
+                <button onClick={()=>{navigate('/user-loginr')}}>Login</button>
             </div>
 
             <div className='Navbar_auth_signup'>
-                <button onClick={()=>{navigate('/donor-reg')}}>Signup</button>
+                <button onClick={()=>{navigate('/user-login')}}>Signup</button>
             </div>
         </div>
 

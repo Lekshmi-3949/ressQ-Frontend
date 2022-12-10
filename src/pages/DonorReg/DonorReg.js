@@ -55,14 +55,14 @@ function DonorReg() {
           <div classname='content_su'>
 
         <input className='su__input' type="text" value={fullname} onChange={(e)=>{setfullname(e.target.value)}} placeholder='Full name' required/>
-        <input className='su__input' type="emailaddress"  value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder='Email' required/>
+        <input className='su__input' type="text"  value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder='Email' required/>
         <input className='su__input' type="text"  value={bloodtype} onChange={(e)=>{setbloodtype(e.target.value)}} placeholder='Blood type' required/>
-        <input className='su__input' type="text"  value={gender} onChange={(e)=>{setgender(e.target.value)}} placeholder='Gender' required/>
-        <input className='su__input' type="weight"  value={weight} onChange={(e)=>{setweight(e.target.value)}} placeholder='Weight' required/>
+        <input className='su__input' type="text"  value={gender} onChange={(e)=>{setgender(e.target.value)}} placeholder='Gender(M/F/O)' required/>
+        <input className='su__input' type="number"  value={weight} onChange={(e)=>{setweight(e.target.value)}} placeholder='Weight' required/>
         <input className='su__input' type="text"  value={city} onChange={(e)=>{setcity(e.target.value)}} placeholder='City' required/>
-        <input className='su__input' type="pincode"  value={pincode} onChange={(e)=>{setpincode(e.target.value)}} placeholder='Pincode' required/>
+        <input className='su__input' type="number"  value={pincode} onChange={(e)=>{setpincode(e.target.value)}} placeholder='Pincode' required/>
       </div>
-        <button  type='submit ' className='donor_reg_button'>SignUp</button>
+        <button  type='submit ' onClick={handleLogin} className='donor_reg_button'>SignUp</button>
          
       </form>
 

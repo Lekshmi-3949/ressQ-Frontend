@@ -35,6 +35,11 @@
     color: #ffff;
     overflow: contain;
 }
+.donor_reg_button:hover{
+    color: light blue;
+    background-color: black;
+}
+
 .donor_reg_inputs
 {
     display: flex;

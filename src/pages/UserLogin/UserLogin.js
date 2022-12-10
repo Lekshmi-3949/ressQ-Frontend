@@ -5,6 +5,7 @@ import baseUrl from '../../utils/Urls'
 import axiosInstance from '../../utils/axios'
 import {useNavigate} from 'react-router-dom'
 const UserLogin = () => {
+  const[uname,setuname]=useState('')
   const[email,setemail]=useState('')
   const[password,setPassword]=useState('')
  const navigate=useNavigate()
@@ -13,6 +14,7 @@ const UserLogin = () => {
   const handleLogin= async(e)=>{
     e.preventDefault()
     axiosInstance.post(`${baseUrl}/api/token/`,{
+      uname : uname,
         email: email,
         password : password
     }).then((res)=>{
@@ -34,6 +36,7 @@ const UserLogin = () => {
       <div className="login_form__container" >
       <form onSubmit={handleLogin} className='login__form' >
         <p className='login__header'>Login</p>
+        <input className='login__input' type="text" value={uname} onChange={(e)=>{setuname(e.target.value)}} placeholder='user name' required/>
         <input className='login__input' type="text" value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder='email id' required/>
         <input className='login__input' type="password"  value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder='password' required/>
         

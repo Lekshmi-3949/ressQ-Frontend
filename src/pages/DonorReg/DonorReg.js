@@ -6,25 +6,47 @@ import axiosInstance from '../../utils/axios'
 import {useNavigate} from 'react-router-dom'
 function DonorReg() {
   const[fullname,setfullname]=useState('')
-  const[email,setemail]=useState('')
+  const[phonenumber,setphonenumber]=useState('')
   const[bloodtype,setbloodtype]=useState('')
+  const[dob,setdob]=useState('')
   const[gender,setgender]=useState('')
   const[weight,setweight]=useState('')
-  const[city,setcity]=useState('')
-  const[pincode,setpincode]=useState('')
+  const[branch,setbranch]=useState('')
+  const[batch,setbatch]=useState('')
+  const[district,setdistrict]=useState('')
+  const[lastdonated,setlastdonated]=useState('')
+  const[disease,setdisease]=useState('')
+  const[allergy,setallergy]=useState('')
+  const[cardiac,setcardiac]=useState('')
+  const[bleeding,setbleeding]=useState('')
+  const[hiv,sethiv]=useState('')
+  const[hepatitis,sethepatitis]=useState('')
+
  const navigate=useNavigate()
 
-  
+  const districts=["Enter District","Ernakulam","Palakkad"]
   const handleLogin= async(e)=>{
     e.preventDefault()
     axiosInstance.post(`${baseUrl}/api/token/`,{
       fullname: fullname,  
-      email: email,
+      phonenumber: phonenumber,
       bloodtype: bloodtype,
+      dob : dob,
       gender: gender,
       weight: weight,
-      city: city,
-      pincode: pincode
+      branch : branch,
+      batch : batch,
+      district: district,
+      lastdonated: lastdonated,
+      disease : disease,
+      allergy : allergy,
+      cardiac : cardiac,
+      bleeding : bleeding,
+      hiv : hiv,
+      hepatitis : hepatitis
+
+
+      
 
     }).then((res)=>{
         console.log(res)
@@ -49,18 +71,34 @@ function DonorReg() {
            <a href="/" className='signup__title'>sign up and continue</a>
         </div>
        
-        <div classname="donor_reg_inputs">
+        <div className='donor_reg_inputs'>
         <form onSubmit={handleLogin} className='' >
 
-          <div classname='content_su'>
+          <div className='content_su'>
 
-        <input className='su__input' type="text" value={fullname} onChange={(e)=>{setfullname(e.target.value)}} placeholder='Full name' required/>
-        <input className='su__input' type="text"  value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder='Email' required/>
-        <input className='su__input' type="text"  value={bloodtype} onChange={(e)=>{setbloodtype(e.target.value)}} placeholder='Blood type' required/>
+        <input className='su__input' type="text" value={fullname} onChange={(e)=>{setfullname(e.target.value)}} placeholder='Full name' required/> 
+       <input className='su__input' type="number"  value={phonenumber} onChange={(e)=>{setphonenumber(e.target.value)}} placeholder='Phone Number' required/>
+       <input className='su__input' type="text"  value={bloodtype} onChange={(e)=>{setbloodtype(e.target.value)}} placeholder='Blood type' required/>
+        <input className='su__input' type="date"  value={dob} onChange={(e)=>{setdob(e.target.value)}} placeholder='Date-Of-Birth' required/>
         <input className='su__input' type="text"  value={gender} onChange={(e)=>{setgender(e.target.value)}} placeholder='Gender(M/F/O)' required/>
         <input className='su__input' type="number"  value={weight} onChange={(e)=>{setweight(e.target.value)}} placeholder='Weight' required/>
-        <input className='su__input' type="text"  value={city} onChange={(e)=>{setcity(e.target.value)}} placeholder='City' required/>
-        <input className='su__input' type="number"  value={pincode} onChange={(e)=>{setpincode(e.target.value)}} placeholder='Pincode' required/>
+        <input className='su__input' type="text"  value={branch} onChange={(e)=>{setbranch(e.target.value)}} placeholder='Class' required/>
+        <input className='su__input' type="text"  value={batch} onChange={(e)=>{setbatch(e.target.value)}} placeholder='Batch' required/>
+        {/* <label >Enter District</label> */}
+        <select className='su__input'  value={district} onChange={(e)=>{setdistrict(e.target.value)}} id="districts" name="di">
+        {
+
+          districts.map((item,index)=>{
+              return(<option value={item} key={index}>{item} </option>)
+          })
+        } </select>
+        <input className='su__input' type="month"  value={lastdonated} onChange={(e)=>{setlastdonated(e.target.value)}} placeholder='LastDonated' required/>
+        <input className='su__input' type="text"  value={disease} onChange={(e)=>{setdisease(e.target.value)}} placeholder='Any Disease' required/>
+        <input className='su__input' type="text"  value={allergy} onChange={(e)=>{setallergy(e.target.value)}} placeholder='Any Allergy' required/>
+        <input className='su__input' type="text"  value={cardiac} onChange={(e)=>{setcardiac(e.target.value)}} placeholder='Cardiac ?' required/>
+        <input className='su__input' type="text"  value={bleeding} onChange={(e)=>{setbleeding(e.target.value)}} placeholder='Bleeding ?' required/>
+        <input className='su__input' type="text"  value={hiv} onChange={(e)=>{sethiv(e.target.value)}} placeholder='HIV ?' required/>
+        <input className='su__input' type="text"  value={hepatitis} onChange={(e)=>{sethepatitis(e.target.value)}} placeholder='Hepatitis ?' required/>
       </div>
         <button  type='submit ' onClick={handleLogin} className='donor_reg_button'>SignUp</button>
          

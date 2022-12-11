@@ -6,9 +6,9 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { flexbox } from '@mui/system';
 
-const DropdownDis = () => {
-    const districts=["None","Alappuzha","Ernakulam","Idukki","Kannur","Kasaragod","Kollam","Kottayam","Kozhikode","Malappuram","Palakkad","Pathanamthitta","Thiruvananthapuram","Thrissur","Wayanad"]
-    const[district,setdistrict]= React.useState('')
+const DropdownDis = (props) => {
+    //const districts=["None","Alappuzha","Ernakulam","Idukki","Kannur","Kasaragod","Kollam","Kottayam","Kozhikode","Malappuram","Palakkad","Pathanamthitta","Thiruvananthapuram","Thrissur","Wayanad"]
+    //const[district,setdistrict]= React.useState('')
 
   return (
     <div >
@@ -17,12 +17,12 @@ const DropdownDis = () => {
         <Select
           labelId="demo-select-small"
           id="demo-select-small"
-          value={district}
-          onChange={(e)=>{setdistrict(e.target.value)}}
+          value={props.district}
+          onChange={(e)=>{props.setdistrict(e.target.value)}}
           autoWidth
           label="Districts"
         >
-            {districts.map((item,index)=>{
+            {props.districts.map((item,index)=>{
                         return(<MenuItem value={item} key={index}>{item} </MenuItem>)
                         })
             } 

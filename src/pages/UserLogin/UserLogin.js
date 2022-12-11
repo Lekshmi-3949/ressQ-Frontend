@@ -15,13 +15,17 @@ const UserLogin = () => {
   const handleSignup=(e)=>{
     e.preventDefault();
     axios.post(`${baseUrl}/register/`,{
-      user_name:uname,
+      username:uname,
       email:email,
       password:password,
 
       }).then((response)=>{
-      console.log(response)}
-      )
+    if(response.status===201){
+   navigate('/user-loginr')
+}
+},(error)=>{
+    console.log(error)
+})
   }
   return (
     <MainLayout>

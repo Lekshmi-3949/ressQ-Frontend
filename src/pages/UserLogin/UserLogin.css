@@ -13,7 +13,11 @@
   overflow: contain;
   justify-content: center;
   padding:3rem;
+  margin-top: 2rem;
+
 }
+
+
 .login__button{
   background-color: #0062CC;
   /* position: fixed; */
@@ -25,6 +29,7 @@
   border-radius: 20px;
   color: #ffff;
   overflow: contain;
+  border: none;
 }
 .signin{
     
@@ -36,7 +41,7 @@
 
 .login__input{
   height: 30px;
-  padding :8px 8px;
+  padding :8px 4px;
 
   margin: 8px 0;
   border-radius: 10px;
@@ -50,10 +55,21 @@
   display: flex;
   max-width: 560px;
   background: hsla(0,0%,100%,.25);
-  padding: 3rem;
+  padding: 2rem;
   height: 30rem;
   border-radius: 20px;
   flex-direction: column;
   gap: 2rem;
   /* position: relative; */
+}
+
+.login__form p{
+  margin: 0;
+  
+}
+
+.login__signin{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
 }

@@ -34,7 +34,7 @@ const UserLogin = () => {
         <input className='login__input' type="password"  value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder='password' required/>
         
         <button  type='submit ' className='login__button'>SignUp</button>
-         <div><p>Already have an account?</p><a href="/" className='signin'>sign in</a></div>
+         <div className='login__signin'><p>Already have an account?</p><a href="/" className='signin'>sign in</a></div>
       </form>
       </div>
     </div>

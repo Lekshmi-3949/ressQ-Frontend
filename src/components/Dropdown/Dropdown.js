@@ -12,10 +12,10 @@ import { flexbox } from '@mui/system';
 
 
 const Dropdown = () => {
-  const [bloodgroup, setAge] = React.useState('');
+  const [bloodgroup, setBlood] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setBlood(event.target.value);
   };
 
 

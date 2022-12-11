@@ -63,9 +63,7 @@ background: #F8F8F8;
 border-radius: 10px;
 
 }
-            .need_blood_bgicon{
-
-            }
+            
 
             .need_blood_bgroup{
                 background-color: white;
@@ -91,9 +89,7 @@ top: 412px;
 background: #F8F8F8;
 border-radius: 10px;
 }
-    .need_blood_locicon{
-
-    }
+    
 
     .need_blood_loc{
         background-color: white;
@@ -149,9 +145,9 @@ border-radius: 10px;
     margin-top: 2rem;
     align-items:flex-start;
     
-    color: lightslategrey;
+    color: white;
     list-style: 0px;
-    background: rgba(255, 255, 255, 0.171);    
+    background: #02011F;    
     min-height: 10rem;
 
 

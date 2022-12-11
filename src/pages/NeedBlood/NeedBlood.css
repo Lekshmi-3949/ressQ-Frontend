@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100&display=swap');
+
+
+body{
+ background-color: #77A7CA;
+}
+
+.need_blood_container{
+    top: 4rem;
+    position:absolute;
+    background-color:#77A7CA;
+    width: 100%;
+
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    
+
+    
+    background: #77A7CA;    
+    color: whitesmoke;
+    padding-top: 3rem;
+}
+
+.need_blood_title{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3rem;
+    text-align:center;
+}
+
+.need_blood_searchBox{
+    
+    display: flex;
+    
+    flex-direction: row;
+    justify-content:center;
+    margin-top: 2rem;
+    
+    
+
+    
+
+    
+}
+
+
+.need_blood_bGroups{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    
+
+
+left: 193px;
+top: 412px;
+
+background: #F8F8F8;
+border-radius: 10px;
+
+}
+            .need_blood_bgicon{
+
+            }
+
+            .need_blood_bgroup{
+                background-color: white;
+                color: black;
+                border: none;
+                
+            }
+                
+            
+
+
+.need_blood_location{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    margin-left: 2rem;
+
+
+left: 193px;
+top: 412px;
+
+background: #F8F8F8;
+border-radius: 10px;
+}
+    .need_blood_locicon{
+
+    }
+
+    .need_blood_loc{
+        background-color: white;
+        color: black;
+        background-color: white;
+        color: black;
+        border: none;
+    }
+    
+                
+
+.need_blood_searchbtn{
+    height: 55px;
+
+    line-height: 0;
+    background: #0062CC;
+    box-shadow: 4px 4px 4px #4285F4;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: .65rem;
+    margin-left: 2rem;
+
+    height: 3.5rem;
+    width: 6.5rem;
+    
+
+    
+}
+      
+
+.need_blood_filter{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    background: rgba(255, 255, 255, 0.171);    
+    height: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 2rem;
+    color: lightslategrey;
+
+
+}
+
+      
+.need_blood_records{
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 2rem;
+    align-items:flex-start;
+    
+    color: lightslategrey;
+    list-style: 0px;
+    background: rgba(255, 255, 255, 0.171);    
+    min-height: 10rem;
+
+
+    
+
+}
+
+      
+
+
+
+
+        
+    

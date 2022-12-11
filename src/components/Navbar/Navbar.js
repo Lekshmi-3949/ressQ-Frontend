@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
 
             <div className='Navbar_auth_signup'>
-                <button onClick={()=>{navigate('/user-login')}}>Signup</button>
+                <button onClick={()=>{navigate('/user-signup')}}>Signup</button>
             </div>
         </div>
 

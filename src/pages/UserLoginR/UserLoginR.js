@@ -17,10 +17,10 @@ const UserLoginR = () => {
             "password" : password
         }).then((res)=>{
             console.log(res)
-            // localStorage.setItem('access_token',res.data.access);
-            // localStorage.setItem('refresh_token',res.data.refresh);
-            // axiosInstance.defaults.headers['Authorization']= 'Bearer ' + localStorage.getItem('access_token');
-            // axiosInstance.defaults.headers['Content-Type']= 'application/json';
+             localStorage.setItem('access_token',res.data.access);
+            localStorage.setItem('refresh_token',res.data.refresh);
+            axiosInstance.defaults.headers['Authorization']= 'Bearer ' + localStorage.getItem('access_token');
+            
             if(res.status===200)
             
             navigate('/')

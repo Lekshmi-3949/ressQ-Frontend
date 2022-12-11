@@ -14,7 +14,7 @@ function App() {
             <Route path='/'element={<MainPage/>}/> 
             <Route path='/donor-reg'element={<DonorReg/>}/>
             <Route path='/need-blood'element={<NeedBlood/>}/>
-            <Route path='/user-login'element={<UserLogin/>}/>  
+            <Route path='/user-signup'element={<UserLogin/>}/>  
             <Route path='/user-loginr'element={<UserLoginR/>}/>  
          </Routes>
       </BrowserRouter> 

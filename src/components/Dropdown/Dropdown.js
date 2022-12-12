@@ -11,11 +11,11 @@ import { flexbox } from '@mui/system';
 
 
 
-const Dropdown = () => {
-  const [bloodgroup, setAge] = React.useState('');
+const Dropdown = (props) => {
+ // const [bloodgroup, setBlood] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    props.setBlood(event.target.value);
   };
 
 
@@ -26,7 +26,7 @@ const Dropdown = () => {
         <Select
           labelId="demo-select-small"
           id="demo-select-small"
-          value={bloodgroup}
+          value={props.bloodgroup}
           onChange={handleChange}
           autoWidth
           label="Blood Group"
